@@ -5,14 +5,16 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 @ResponseBody
-public class TestController
+public class TestCOntroller
 {
-    @GetMapping("/test")
-    public String firstHandler()
+    @GetMapping
+    public List<String> firstHandler()
     {
-        return "just  ||";
+        return  List.of ("just", "for"," fun",  " ||");
     }
 
 }
